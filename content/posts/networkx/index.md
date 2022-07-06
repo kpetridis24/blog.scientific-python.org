@@ -26,4 +26,11 @@ the code to crash. Fixing this bug will be a top priority during the next steps.
 
 According to the VF2++ paper notation:
 
-$$T_i={u\in V_i \ M: \exists \tilde{u} \in m: (u,\tilde{u}\in E_1)}$$
+$$T_1=\{u\in V_1 \ m: \exists \tilde{u} \in m: (u,\tilde{u}\in E_1)\}$$
+
+where $E_1$ contains all teh edges of the first graph and $m$ is a dictionary, mapping every node of the first graph to
+a node of the second graph. Now if we interpet the above equation, we conclude that $T_1$ contains uncovered neighbors
+of covered nodes. In simple terms, it includes all the nodes that do not belong in the mapping $m$ yet, but are
+neighbors of nodes that are in the mapping. In addition,
+
+$$\tilde{T_1}=\(V_1 \ m \ T_1\)$$
